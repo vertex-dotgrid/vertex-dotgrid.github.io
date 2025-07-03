@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support & Help - Vertex: Dotgrid</title>
+    <meta
+      name="description"
+      content="Get help with Vertex: Dotgrid. FAQs, troubleshooting, and contact information for support."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        /* Vertex Brand Colors */
+        --vertex-blue: #081824;
+        --vertex-yellow: #df9e2f;
+        --vertex-green: #2a7c6e;
+        --vertex-white: #f5e0a7;
+
+        /* Background system */
+        --background-primary: var(--vertex-blue);
+        --background-secondary: #0f1e2a;
+        --surface: #162631;
+        --surface-elevated: #1d2e3a;
+        --surface-highest: #243541;
+
+        /* Text system */
+        --text-primary: var(--vertex-white);
+        --text-secondary: #c5b896;
+        --text-muted: #9a9179;
+        --text-disabled: #706b5c;
+
+        /* Border system */
+        --border-primary: #243541;
+        --border-secondary: #1d2e3a;
+        --border-accent: var(--vertex-green);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.7;
+        color: var(--text-primary);
+        background: var(--background-primary);
+      }
+
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(8, 24, 36, 0.95);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border-primary);
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+
+      .nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--text-primary);
+        text-decoration: none;
+      }
+
+      .logo-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--vertex-green);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .logo-icon::after {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: var(--vertex-yellow);
+        border-radius: 50%;
+        top: 8px;
+        right: 8px;
+      }
+
+      .logo-icon::before {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: var(--vertex-white);
+        border-radius: 50%;
+        bottom: 10px;
+        left: 10px;
+      }
+
+      .back-link {
+        color: var(--vertex-yellow);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .back-link:hover {
+        color: var(--vertex-white);
+      }
+
+      .main {
+        margin-top: 70px;
+        padding: 60px 0;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .page-header {
+        text-align: center;
+        margin-bottom: 60px;
+        padding: 60px 0;
+        background: var(--background-secondary);
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .page-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="15" height="15" patternUnits="userSpaceOnUse"><circle cx="7.5" cy="7.5" r="1" fill="rgba(223,158,47,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+        opacity: 0.5;
+      }
+
+      .page-header h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 800;
+        margin-bottom: 16px;
+        color: var(--text-primary);
+        position: relative;
+        z-index: 1;
+      }
+
+      .page-header .subtitle {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        position: relative;
+        z-index: 1;
+      }
+
+      .quick-contact {
+        background: var(--vertex-green);
+        color: var(--vertex-white);
+        border-radius: 20px;
+        padding: 40px;
+        margin-bottom: 60px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .quick-contact h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      .quick-contact p {
+        font-size: 1.1rem;
+        margin-bottom: 24px;
+        opacity: 0.9;
+      }
+
+      .contact-email {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 24px;
+        background: var(--vertex-yellow);
+        color: var(--vertex-blue);
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+      }
+
+      .contact-email:hover {
+        background: var(--vertex-blue);
+        color: var(--vertex-white);
+        transform: translateY(-2px);
+      }
+
+      .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        gap: 40px;
+        margin-bottom: 60px;
+      }
+
+      .main-content {
+        background: var(--surface);
+        border-radius: 20px;
+        padding: 50px;
+        border: 1px solid var(--border-primary);
+      }
+
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .sidebar-card {
+        background: var(--surface);
+        border-radius: 16px;
+        padding: 32px;
+        border: 1px solid var(--border-primary);
+      }
+
+      .sidebar-card h3 {
+        color: var(--vertex-green);
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .faq-container {
+        display: grid;
+        gap: 20px;
+      }
+
+      .faq-item {
+        background: var(--surface-elevated);
+        border: 1px solid var(--border-primary);
+        border-radius: 16px;
+        padding: 32px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .faq-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: var(--vertex-green);
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: transform 0.3s ease;
+      }
+
+      .faq-item:hover {
+        border-color: var(--vertex-yellow);
+        transform: translateX(8px);
+      }
+
+      .faq-item:hover::before {
+        transform: scaleY(1);
+      }
+
+      .faq-question {
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .faq-question::before {
+        content: "?";
+        background: var(--vertex-yellow);
+        color: var(--vertex-blue);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .faq-answer {
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-left: 36px;
+      }
+
+      .faq-answer strong {
+        color: var(--vertex-yellow);
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+        font-weight: 800;
+        margin-bottom: 32px;
+        color: var(--vertex-yellow);
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .platform-info {
+        margin: 16px 0px;
+      }
+
+      .platform-card {
+        background: var(--surface-elevated);
+        border-radius: 16px;
+        padding: 24px;
+        margin: 32px 0;
+        text-align: center;
+        border: 1px solid var(--border-primary);
+      }
+
+      .platform-card h4 {
+        color: var(--vertex-green);
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+
+      /* iOS Platform Icon */
+      .platform-card:first-child .icon {
+        background-image: url("assets/images/apple_store_logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 48px;
+        height: 48px;
+        font-size: 0; /* Hide emoji text */
+        margin: 0 auto 16px;
+        display: block;
+      }
+
+      /* Android Platform Icon */
+      .platform-card:last-child .icon {
+        background-image: url("assets/images/play_logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 48px;
+        height: 48px;
+        font-size: 0; /* Hide emoji text */
+        margin: 0 auto 16px;
+        display: block;
+      }
+
+      /* More specific targeting if needed */
+      .platform-card h4:contains("iOS") ~ .icon,
+      .platform-card:has(h4:contains("iOS")) .icon {
+        background-image: url("assets/images/apple_store_logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-size: 0;
+      }
+
+      .platform-card h4:contains("Android") ~ .icon,
+      .platform-card:has(h4:contains("Android")) .icon {
+        background-image: url("assets/images/play_logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-size: 0;
+      }
+
+      .platform-card ul {
+        list-style: none;
+        text-align: left;
+      }
+
+      .platform-card li {
+        position: relative;
+        padding: 0px 0 0px 24px;
+        color: var(--text-secondary);
+      }
+
+      .platform-card li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--vertex-yellow);
+        font-weight: bold;
+      }
+
+      .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+        margin: 32px 0;
+      }
+
+      .tip-card {
+        background: var(--surface-elevated);
+        border: 1px solid var(--border-primary);
+        border-radius: 16px;
+        padding: 32px;
+        transition: all 0.3s ease;
+      }
+
+      .tip-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        border-color: var(--vertex-green);
+      }
+
+      .tip-card h4 {
+        color: var(--vertex-yellow);
+        margin-bottom: 16px;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+
+      .tip-card ul {
+        list-style: none;
+      }
+
+      .tip-card li {
+        position: relative;
+        padding: 8px 0 8px 24px;
+        color: var(--text-secondary);
+      }
+
+      .tip-card li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--vertex-green);
+        font-weight: bold;
+      }
+
+      .download-links {
+        display: flex;
+        gap: 16px;
+        margin-top: 16px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .download-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 20px;
+        width: 180px;
+        background: var(--vertex-green);
+        color: var(--vertex-white);
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .download-link:hover {
+        background: #236b5e;
+        transform: translateY(-2px);
+      }
+
+      /* App Store Download Link */
+      .download-link[href*="apps.apple.com"] span:first-child {
+        background-image: url("assets/images/apple_store_logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 24px;
+        height: 24px;
+        font-size: 0; /* Hide emoji text */
+        display: inline-block;
+      }
+
+      /* Android Beta Download Link */
+      .download-link[href*="play.google.com"] span:first-child {
+        background-image: url("assets/images/play_logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 24px;
+        height: 24px;
+        font-size: 0; /* Hide emoji text */
+        display: inline-block;
+      }
+
+      /* Alternative: More specific targeting by text content */
+      .download-link:has(span:contains("App Store")) span:first-child,
+      .download-link span:first-child:contains("🍎") {
+        background-image: url("assets/images/apple_store_logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+      }
+
+      .download-link:has(span:contains("Android Beta")) span:first-child,
+      .download-link span:first-child:contains("🧪") {
+        background-image: url("assets/images/play_logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+      }
+
+      .footer {
+        background: var(--surface);
+        padding: 40px 0;
+        text-align: center;
+        border-top: 1px solid var(--border-primary);
+      }
+
+      .footer a {
+        color: var(--vertex-yellow);
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        color: var(--vertex-white);
+      }
+
+      @media (max-width: 768px) {
+        .content-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .sidebar {
+          order: -1;
+        }
+
+        .main-content {
+          padding: 32px 24px;
+        }
+
+        .sidebar-card {
+          padding: 24px;
+        }
+
+        .page-header {
+          padding: 40px 20px;
+        }
+
+        .quick-contact {
+          padding: 32px 20px;
+        }
+
+        .platform-info {
+          grid-template-columns: 1fr;
+        }
+
+        .tips-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .download-links {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"></div>
+          <span>VERTEX</span>
+        </a>
+        <a href="index.html" class="back-link">← Back to Home</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="page-header">
+          <h1>Support & Help</h1>
+          <p class="subtitle">
+            Get help with Vertex: Dotgrid. Find answers, troubleshoot issues,
+            and contact support.
+          </p>
+        </div>
+
+        <div class="quick-contact">
+          <h2>🚀 Need Quick Help?</h2>
+          <p>Get direct support from our team. We respond within 24 hours!</p>
+          <a
+            href="mailto:gpietro.dev@gmail.com?subject=Vertex Support Request"
+            class="contact-email"
+          >
+            <span>✉️</span>
+            <span>Contact Support</span>
+          </a>
+        </div>
+
+        <div class="content-grid">
+          <div class="main-content">
+            <h2 class="section-title">
+              <span>🙋</span>
+              <span>Frequently Asked Questions</span>
+            </h2>
+
+            <div class="faq-container">
+              <div class="faq-item">
+                <div class="faq-question">
+                  How do I restore my Pro purchase?
+                </div>
+                <div class="faq-answer">
+                  <strong>iOS:</strong> Go to the main menu → Settings → Restore
+                  Purchases. <strong>Android:</strong> Main menu → Pro version →
+                  Restore. Make sure you're signed into the same Apple ID or
+                  Google account used for the original purchase.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  The game is running slowly or crashing
+                </div>
+                <div class="faq-answer">
+                  Try these solutions in order: 1) Close and restart the app. 2)
+                  Restart your device. 3) For older devices, try using smaller
+                  board sizes (3×3 instead of 7×7). 4) On Android, clear the app
+                  cache in Settings → Apps → Vertex → Storage → Clear Cache.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  How do I play online with friends?
+                </div>
+                <div class="faq-answer">
+                  Use <strong>"Network Game"</strong> from the main menu. One
+                  player hosts and shares a QR code, others scan it to join.
+                  Both devices must be on the same WiFi network. Camera
+                  permission is required for QR scanning.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">What's included with Vertex Pro?</div>
+                <div class="faq-answer">
+                  Pro version removes all advertisements and provides unlimited
+                  gameplay. You also get priority support and early access to
+                  new features. Future updates will include premium themes and
+                  advanced AI opponents.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  Are AI difficulty levels available?
+                </div>
+                <div class="faq-answer">
+                  Currently, the AI plays at a single balanced difficulty level
+                  that's suitable for most players. Multiple difficulty options
+                  (Easy, Medium, Hard) will be added in a future update based on
+                  player feedback.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">Haptic feedback not working</div>
+                <div class="faq-answer">
+                  <strong>iOS:</strong> Check Settings → Sounds & Haptics →
+                  System Haptics is enabled. <strong>Android:</strong> Check
+                  that vibration is enabled in your device settings and that the
+                  haptic feedback toggle is on in the game settings. Some older
+                  devices may have limited vibration support.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">How do I get a refund?</div>
+                <div class="faq-answer">
+                  <strong>iOS:</strong> Contact Apple Support or visit
+                  reportaproblem.apple.com within 90 days of purchase.
+                  <strong>Android:</strong> Visit Google Play Store → Menu →
+                  Account → Order history → Find the app → Request refund
+                  (within 48 hours) or contact Google Play support.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  Can I transfer my progress to a new device?
+                </div>
+                <div class="faq-answer">
+                  Currently, game progress is stored locally on each device and
+                  doesn't transfer between devices. This design choice
+                  prioritizes your privacy by keeping your data local. Cloud
+                  save functionality may be added in a future update.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  The app won't launch or keeps crashing
+                </div>
+                <div class="faq-answer">
+                  Try these steps: 1) Force close the app completely and reopen.
+                  2) Restart your device. 3) Check if you have the latest app
+                  version in the App Store/Play Store. 4) Free up device storage
+                  (need at least 1GB free). 5) If the problem persists, contact
+                  support with your device model and iOS/Android version.
+                </div>
+              </div>
+            </div>
+
+            <h2 class="section-title">
+              <span>💡</span>
+              <span>Tips & Strategy</span>
+            </h2>
+
+            <div class="tips-grid">
+              <div class="tip-card">
+                <h4>🎯 Gameplay Strategy</h4>
+                <ul>
+                  <li>
+                    <strong>Think Ahead:</strong> Avoid giving your opponent
+                    easy boxes to complete
+                  </li>
+                  <li>
+                    <strong>Chain Reactions:</strong> Try to set up multiple
+                    boxes you can complete in one turn
+                  </li>
+                  <li>
+                    <strong>Sacrifice Strategy:</strong> Sometimes giving away a
+                    few boxes early prevents bigger losses later
+                  </li>
+                  <li>
+                    <strong>Control the Center:</strong> Central lines give you
+                    more strategic options
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tip-card">
+                <h4>📱 Performance Tips</h4>
+                <ul>
+                  <li>
+                    <strong>Smooth Gameplay:</strong> Close other apps before
+                    playing for best performance
+                  </li>
+                  <li>
+                    <strong>Battery Life:</strong> Lower screen brightness to
+                    extend play time
+                  </li>
+                  <li>
+                    <strong>Network Play:</strong> Stay close to WiFi router for
+                    stable connections
+                  </li>
+                  <li>
+                    <strong>Storage:</strong> Keep at least 1GB free space on
+                    your device
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tip-card">
+                <h4>🌐 Multiplayer Tips</h4>
+                <ul>
+                  <li>
+                    <strong>QR Scanning:</strong> Ensure good lighting when
+                    scanning QR codes
+                  </li>
+                  <li>
+                    <strong>WiFi Connection:</strong> Both devices must be on
+                    the same network
+                  </li>
+                  <li>
+                    <strong>Stable Connection:</strong> Stay within 30 feet of
+                    the WiFi router
+                  </li>
+                  <li>
+                    <strong>Backup Plan:</strong> Note the host's IP address for
+                    manual connection
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar">
+            <div class="sidebar-card">
+              <h3>
+                <span>📱</span>
+                <span>App Information</span>
+              </h3>
+              <p><strong>Current Version:</strong> 1.0.0</p>
+              <p><strong>File Size:</strong> ~25 MB</p>
+              <p><strong>Age Rating:</strong> 4+ (Everyone)</p>
+              <p><strong>Category:</strong> Puzzle/Strategy</p>
+              <p><strong>Developer:</strong> Ghezzi Games</p>
+            </div>
+
+            <div class="sidebar-card">
+              <h3>
+                <span>💾</span>
+                <span>System Requirements</span>
+              </h3>
+              <div class="platform-info">
+                <div class="platform-card" data-platform="iOS">
+                  <span class="icon">🍎</span>
+                  <ul>
+                    <li>iOS 14.0 or later</li>
+                    <li>iPhone 6s or newer</li>
+                    <li>iPad (5th gen) or newer</li>
+                    <li>50 MB free space</li>
+                  </ul>
+                </div>
+                <div class="platform-card" data-platform="Android">
+                  <span class="icon">🤖</span>
+                  <ul>
+                    <li>Android 6.0 (API 23+)</li>
+                    <li>2GB RAM minimum</li>
+                    <li>50 MB free space</li>
+                    <li>OpenGL ES 2.0</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h3>
+                <span>🔗</span>
+                <span>Quick Links</span>
+              </h3>
+              <div class="download-links">
+                <a
+                  href="https://apps.apple.com/app/vertex-dotgrid/id6747640695"
+                  class="download-link"
+                >
+                  <span>🍎</span>
+                  <span>App Store</span>
+                </a>
+                <a
+                  href="https://play.google.com/apps/testing/com.ghezzigames.vertexdotgrid"
+                  class="download-link"
+                >
+                  <span>🧪</span>
+                  <span>Android Beta</span>
+                </a>
+              </div>
+              <div style="margin-top: 16px">
+                <a
+                  href="privacy.html"
+                  style="color: var(--vertex-yellow); text-decoration: none"
+                  >📋 Privacy Policy</a
+                >
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h3>
+                <span>📧</span>
+                <span>Contact Support</span>
+              </h3>
+              <p style="margin-bottom: 16px">
+                Need personalized help? Reach out to us!
+              </p>
+              <p>
+                <strong>Email:</strong>
+                <a
+                  href="mailto:gpietro.dev@gmail.com"
+                  style="color: var(--vertex-yellow)"
+                  >gpietro.dev@gmail.com</a
+                >
+              </p>
+              <p><strong>Response Time:</strong> Within 24 hours</p>
+              <p
+                style="
+                  margin-top: 12px;
+                  font-size: 0.9rem;
+                  color: var(--text-muted);
+                "
+              >
+                Include your device model, OS version, and app version for
+                faster support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          © 2025 Ghezzi Games | <a href="index.html">Vertex: Dotgrid</a> |
+          <a href="privacy.html">Privacy Policy</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth header background on scroll
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 100) {
+          header.style.background = "rgba(8, 24, 36, 0.98)";
+        } else {
+          header.style.background = "rgba(8, 24, 36, 0.95)";
+        }
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            const offsetTop = target.offsetTop - 70;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Add loading animation for FAQ items
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe all FAQ items and tip cards
+      document.querySelectorAll(".faq-item, .tip-card").forEach((item) => {
+        item.style.opacity = "0";
+        item.style.transform = "translateY(20px)";
+        item.style.transition = "all 0.6s ease";
+        observer.observe(item);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - Vertex: Dotgrid</title>
+    <meta
+      name="description"
+      content="Privacy Policy for Vertex: Dotgrid - Learn how we protect your privacy and handle your data."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        /* Vertex Brand Colors */
+        --vertex-blue: #081824;
+        --vertex-yellow: #df9e2f;
+        --vertex-green: #2a7c6e;
+        --vertex-white: #f5e0a7;
+
+        /* Background system */
+        --background-primary: var(--vertex-blue);
+        --background-secondary: #0f1e2a;
+        --surface: #162631;
+        --surface-elevated: #1d2e3a;
+        --surface-highest: #243541;
+
+        /* Text system */
+        --text-primary: var(--vertex-white);
+        --text-secondary: #c5b896;
+        --text-muted: #9a9179;
+        --text-disabled: #706b5c;
+
+        /* Border system */
+        --border-primary: #243541;
+        --border-secondary: #1d2e3a;
+        --border-accent: var(--vertex-green);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.7;
+        color: var(--text-primary);
+        background: var(--background-primary);
+      }
+
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(8, 24, 36, 0.95);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border-primary);
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+
+      .nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--text-primary);
+        text-decoration: none;
+      }
+
+      .logo-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--vertex-green);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .logo-icon::after {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: var(--vertex-yellow);
+        border-radius: 50%;
+        top: 8px;
+        right: 8px;
+      }
+
+      .logo-icon::before {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: var(--vertex-white);
+        border-radius: 50%;
+        bottom: 10px;
+        left: 10px;
+      }
+
+      .back-link {
+        color: var(--vertex-yellow);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .back-link:hover {
+        color: var(--vertex-white);
+      }
+
+      .main {
+        margin-top: 70px;
+        padding: 60px 0;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .page-header {
+        text-align: center;
+        margin-bottom: 60px;
+        padding: 60px 0;
+        background: var(--background-secondary);
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .page-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="15" height="15" patternUnits="userSpaceOnUse"><circle cx="7.5" cy="7.5" r="1" fill="rgba(42,124,110,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+        opacity: 0.5;
+      }
+
+      .page-header h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 800;
+        margin-bottom: 16px;
+        color: var(--text-primary);
+        position: relative;
+        z-index: 1;
+      }
+
+      .page-header .subtitle {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        position: relative;
+        z-index: 1;
+      }
+
+      .content {
+        background: var(--surface);
+        border-radius: 20px;
+        padding: 60px;
+        border: 1px solid var(--border-primary);
+        margin-bottom: 40px;
+      }
+
+      .content h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 40px 0 24px 0;
+        color: var(--vertex-yellow);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .content h2:first-child {
+        margin-top: 0;
+      }
+
+      .content h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin: 32px 0 16px 0;
+        color: var(--vertex-green);
+      }
+
+      .content h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 24px 0 12px 0;
+        color: var(--text-primary);
+      }
+
+      .content p {
+        margin-bottom: 20px;
+        color: var(--text-secondary);
+        line-height: 1.8;
+      }
+
+      .content ul,
+      .content ol {
+        margin: 20px 0;
+        padding-left: 0;
+        list-style: none;
+      }
+
+      .content li {
+        position: relative;
+        padding: 8px 0 8px 32px;
+        color: var(--text-secondary);
+        margin-bottom: 8px;
+      }
+
+      .content li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        color: var(--vertex-green);
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      .highlight-box {
+        background: rgba(42, 124, 110, 0.1);
+        border: 2px solid rgba(42, 124, 110, 0.3);
+        border-radius: 16px;
+        padding: 32px;
+        margin: 32px 0;
+        position: relative;
+      }
+
+      .highlight-box::before {
+        content: "🔒";
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 28px;
+        opacity: 0.6;
+      }
+
+      .highlight-box h4 {
+        color: var(--vertex-green);
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+      }
+
+      .contact-info {
+        background: var(--surface-elevated);
+        border-radius: 16px;
+        padding: 32px;
+        margin: 40px 0;
+        text-align: center;
+      }
+
+      .contact-email {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 24px;
+        background: var(--vertex-yellow);
+        color: var(--vertex-blue);
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 700;
+        margin-top: 16px;
+        transition: all 0.3s ease;
+      }
+
+      .contact-email:hover {
+        background: #c6881a;
+        transform: translateY(-2px);
+      }
+
+      .last-updated {
+        background: var(--surface-elevated);
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        margin-bottom: 40px;
+      }
+
+      .footer {
+        background: var(--surface);
+        padding: 40px 0;
+        text-align: center;
+        border-top: 1px solid var(--border-primary);
+      }
+
+      .footer a {
+        color: var(--vertex-yellow);
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        color: var(--vertex-white);
+      }
+
+      @media (max-width: 768px) {
+        .content {
+          padding: 40px 24px;
+        }
+
+        .page-header {
+          padding: 40px 20px;
+        }
+
+        .nav {
+          padding: 0 16px;
+        }
+
+        .container {
+          padding: 0 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"></div>
+          <span>VERTEX</span>
+        </a>
+        <a href="index.html" class="back-link">← Back to Home</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="page-header">
+          <h1>Privacy Policy</h1>
+          <p class="subtitle">
+            Your privacy matters. Learn how we protect and handle your data.
+          </p>
+        </div>
+
+        <div class="last-updated">
+          <strong>Effective Date:</strong> June 30, 2025 |
+          <strong>Last Updated:</strong> July 3, 2025
+        </div>
+
+        <div class="content">
+          <div class="highlight-box">
+            <h4>Our Privacy Promise</h4>
+            <p>
+              Vertex: Dotgrid respects your privacy. We collect minimal
+              information, store most data locally on your device, and never
+              sell your personal information to third parties.
+            </p>
+          </div>
+
+          <h2>🔍 Information We Collect</h2>
+
+          <h3>Information You Provide</h3>
+          <ul>
+            <li>
+              <strong>Player Name:</strong> Optional display name for
+              multiplayer games (stored locally on your device)
+            </li>
+            <li>
+              <strong>Game Settings:</strong> Preferences such as sound, haptic
+              feedback, and visual settings (stored locally)
+            </li>
+            <li>
+              <strong>Support Communications:</strong> When you contact us for
+              support, we keep records of our correspondence
+            </li>
+          </ul>
+
+          <h3>Automatically Collected Information</h3>
+          <ul>
+            <li>
+              <strong>Game Progress:</strong> Local game statistics, scores, and
+              achievements (stored locally on your device)
+            </li>
+            <li>
+              <strong>Usage Analytics:</strong> Basic app usage patterns through
+              Google Analytics for Firebase (anonymized)
+            </li>
+            <li>
+              <strong>Crash Reports:</strong> Automatic crash reporting to help
+              improve app stability (no personal data)
+            </li>
+            <li>
+              <strong>Device Information:</strong> Device type, operating system
+              version, and app version for compatibility
+            </li>
+          </ul>
+
+          <h2>💾 How We Store Your Data</h2>
+
+          <h3>Local Storage (Most Data)</h3>
+          <ul>
+            <li>
+              <strong>iOS:</strong> Data stored using iOS Keychain,
+              UserDefaults, and local Hive database
+            </li>
+            <li>
+              <strong>Android:</strong> Data stored using Android
+              SharedPreferences, internal storage, and local Hive database
+            </li>
+            <li>
+              <strong>Network Multiplayer:</strong> Direct device-to-device
+              communication over local WiFi - no external servers involved
+            </li>
+            <li>
+              <strong>Your Control:</strong> You can delete all local data by
+              uninstalling the app
+            </li>
+          </ul>
+
+          <h3>Cloud Services (Limited)</h3>
+          <ul>
+            <li>
+              <strong>Analytics:</strong> Anonymous usage data sent to Google
+              Analytics for Firebase
+            </li>
+            <li>
+              <strong>Crash Reports:</strong> Automated crash logs sent to help
+              improve app stability
+            </li>
+            <li>
+              <strong>No Personal Data:</strong> These services do not receive
+              any personally identifiable information
+            </li>
+          </ul>
+
+          <h2>🔗 Third-Party Services</h2>
+
+          <h3>Google Analytics for Firebase</h3>
+          <ul>
+            <li>
+              <strong>Purpose:</strong> Understand how players use the app to
+              improve the experience
+            </li>
+            <li>
+              <strong>Data Collected:</strong> App usage patterns, session
+              duration, feature usage (anonymized)
+            </li>
+            <li>
+              <strong>Opt-Out:</strong> iOS: Settings > Privacy & Security;
+              Android: Google Settings > Usage & Diagnostics
+            </li>
+          </ul>
+
+          <h3>Google AdMob (Free Version Only)</h3>
+          <ul>
+            <li>
+              <strong>Purpose:</strong> Display advertisements in the free
+              version of the app
+            </li>
+            <li>
+              <strong>Data:</strong> Device advertising ID, general location
+              (country/region), age group
+            </li>
+            <li>
+              <strong>Family-Friendly:</strong> All ads are set to
+              family-friendly content only
+            </li>
+            <li>
+              <strong>Remove Ads:</strong> Purchase Pro version to completely
+              remove all advertisements
+            </li>
+          </ul>
+
+          <h3>In-App Purchases</h3>
+          <ul>
+            <li>
+              <strong>iOS:</strong> Processed through Apple App Store (subject
+              to Apple's privacy policy)
+            </li>
+            <li>
+              <strong>Android:</strong> Processed through Google Play Store
+              (subject to Google's privacy policy)
+            </li>
+            <li>
+              <strong>Our Access:</strong> We only receive confirmation of
+              successful purchases, no payment information
+            </li>
+          </ul>
+
+          <h2>📱 Platform-Specific Privacy</h2>
+
+          <h3>iOS Privacy Features</h3>
+          <ul>
+            <li>
+              <strong>App Tracking Transparency:</strong> We request permission
+              before any tracking for advertising purposes
+            </li>
+            <li>
+              <strong>Camera Access:</strong> Only used for QR code scanning in
+              network multiplayer (with your permission)
+            </li>
+            <li>
+              <strong>Local Network Access:</strong> Only used for local WiFi
+              multiplayer games
+            </li>
+            <li>
+              <strong>Privacy Controls:</strong> Manage ad tracking in Settings
+              > Privacy & Security > Apple Advertising
+            </li>
+          </ul>
+
+          <h3>Android Privacy Features</h3>
+          <ul>
+            <li>
+              <strong>Required Permissions:</strong> INTERNET (analytics/ads),
+              VIBRATE (haptic feedback), CAMERA (QR scanning),
+              ACCESS_NETWORK_STATE (multiplayer)
+            </li>
+            <li>
+              <strong>Privacy Dashboard:</strong> View and control all app
+              permissions in Android settings
+            </li>
+            <li>
+              <strong>Advertising Controls:</strong> Manage ad personalization
+              in Google Settings > Ads
+            </li>
+          </ul>
+
+          <h2>👶 Children's Privacy (COPPA Compliance)</h2>
+
+          <p>
+            Vertex: Dotgrid is designed to be family-friendly and suitable for
+            all ages. We take children's privacy seriously:
+          </p>
+
+          <ul>
+            <li>
+              <strong>No Personal Information:</strong> We do not knowingly
+              collect personal information from children under 13
+            </li>
+            <li>
+              <strong>Age-Appropriate Ads:</strong> All advertising content is
+              set to family-friendly and age-appropriate
+            </li>
+            <li>
+              <strong>COPPA Compliance:</strong> We comply with the Children's
+              Online Privacy Protection Act
+            </li>
+            <li>
+              <strong>Parental Controls:</strong> Parents can disable analytics
+              and advertising through device settings
+            </li>
+            <li>
+              <strong>Local Data Only:</strong> Game progress and settings are
+              stored locally on the device
+            </li>
+          </ul>
+
+          <h2>🔐 Your Privacy Rights</h2>
+
+          <h3>Access and Control</h3>
+          <ul>
+            <li>
+              <strong>View Your Data:</strong> All your data is stored locally
+              and visible through game settings
+            </li>
+            <li>
+              <strong>Delete Your Data:</strong> Uninstall the app to remove all
+              locally stored data
+            </li>
+            <li>
+              <strong>Control Advertising:</strong> Purchase Pro version to
+              remove all advertisements
+            </li>
+            <li>
+              <strong>Analytics Opt-Out:</strong> Disable through your device's
+              privacy settings
+            </li>
+          </ul>
+
+          <h3>Data Portability</h3>
+          <ul>
+            <li>
+              <strong>Local Storage:</strong> Your game data is stored locally
+              and travels with your device
+            </li>
+            <li>
+              <strong>No Cloud Sync:</strong> We don't store your game progress
+              on our servers
+            </li>
+            <li>
+              <strong>Device Transfer:</strong> Game progress doesn't transfer
+              between devices (stays private to each device)
+            </li>
+          </ul>
+
+          <h2>🛡️ Data Security</h2>
+
+          <ul>
+            <li>
+              <strong>Local Storage:</strong> Most data never leaves your device
+            </li>
+            <li>
+              <strong>Encrypted Connections:</strong> All network communications
+              use secure HTTPS/TLS encryption
+            </li>
+            <li>
+              <strong>Minimal Data Collection:</strong> We only collect data
+              necessary for app functionality
+            </li>
+            <li>
+              <strong>No Data Sales:</strong> We never sell, rent, or share your
+              personal information with third parties
+            </li>
+            <li>
+              <strong>Regular Updates:</strong> We keep our security practices
+              up to date with industry standards
+            </li>
+          </ul>
+
+          <h2>📋 App Store Compliance</h2>
+
+          <ul>
+            <li>
+              <strong>Apple App Store:</strong> Complies with Apple's App Store
+              Review Guidelines and iOS privacy requirements
+            </li>
+            <li>
+              <strong>Google Play Store:</strong> Complies with Google Play
+              Developer Policy and Android privacy best practices
+            </li>
+            <li>
+              <strong>Regular Reviews:</strong> Our privacy practices are
+              reviewed with each app update
+            </li>
+          </ul>
+
+          <h2>🔄 Changes to This Policy</h2>
+
+          <p>
+            We may update this privacy policy from time to time to reflect
+            changes in our practices or applicable laws. When we make changes:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Notification:</strong> We'll notify users through the app
+              or update notifications
+            </li>
+            <li>
+              <strong>Effective Date:</strong> Changes become effective on the
+              date specified in the updated policy
+            </li>
+            <li>
+              <strong>Continued Use:</strong> Continued use of the app after
+              changes indicates acceptance of the new terms
+            </li>
+            <li>
+              <strong>Material Changes:</strong> For significant changes, we may
+              seek explicit consent
+            </li>
+          </ul>
+
+          <div class="contact-info">
+            <h3>Questions About Privacy?</h3>
+            <p>
+              If you have questions about this privacy policy or how we handle
+              your data, please contact us:
+            </p>
+            <a
+              href="mailto:gpietro.dev@gmail.com?subject=Vertex Privacy Inquiry"
+              class="contact-email"
+            >
+              <span>✉️</span>
+              <span>gpietro.dev@gmail.com</span>
+            </a>
+            <p
+              style="
+                margin-top: 16px;
+                font-size: 0.9rem;
+                color: var(--text-muted);
+              "
+            >
+              <strong>Subject line:</strong> "Vertex Privacy Inquiry"<br />
+              <strong>Include:</strong> Your device platform (iOS/Android) and
+              app version
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          © 2025 Ghezzi Games | <a href="index.html">Vertex: Dotgrid</a> |
+          <a href="support.html">Support</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth header background on scroll
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 100) {
+          header.style.background = "rgba(8, 24, 36, 0.98)";
+        } else {
+          header.style.background = "rgba(8, 24, 36, 0.95)";
+        }
+      });
+    </script>
+  </body>
+</html>
